@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="safe99_soft_renderer_2d">
+      <UniqueIdentifier>{eb577ac9-d713-45fd-94be-906ff0a956cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_math">
+      <UniqueIdentifier>{ad968e83-4ce4-4750-9d76-fbe0e9c00561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_generic">
+      <UniqueIdentifier>{04beddee-faac-4f09-a7b1-f67d86ade0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_ecs">
+      <UniqueIdentifier>{1c694930-3022-4c1e-8904-2d2154ac96f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_common">
+      <UniqueIdentifier>{1b8b32e0-a5f0-4727-aab8-495b27dd90c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bit_game_template">
+      <UniqueIdentifier>{667312da-a8e4-4bea-8b53-04e6e2cdc648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_generic\util">
+      <UniqueIdentifier>{4483003a-ada6-47e0-a189-1268e5e5d687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bit_game_template\private">
+      <UniqueIdentifier>{f2f819f5-eb13-47f0-a7fc-56c93507b317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe99_file_system">
+      <UniqueIdentifier>{bf9be4d2-6bc8-420a-90ae-cb6b5d785339}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\safe99_soft_renderer_2d\i_soft_renderer_2d.h">
+      <Filter>safe99_soft_renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\color.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\math.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\math_defines.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\math_misc.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\matrix.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_math\vector.h">
+      <Filter>safe99_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\util\hash_function.h">
+      <Filter>safe99_generic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\util\timer.h">
+      <Filter>safe99_generic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\chunked_memory_pool.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\dynamic_vector.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\fixed_vector.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\list.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\map.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_generic\static_memory_pool.h">
+      <Filter>safe99_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_ecs\i_ecs.h">
+      <Filter>safe99_ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_common\defines.h">
+      <Filter>safe99_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\bit_game_template\key_event.h">
+      <Filter>bit_game_template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\bit_game_template\game.h">
+      <Filter>bit_game_template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_file_system\i_file_system.h">
+      <Filter>safe99_file_system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\bit_game_template\console_util.h">
+      <Filter>bit_game_template</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\bit_game_template\private\main.c">
+      <Filter>bit_game_template\private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\bit_game_template\key_event.c">
+      <Filter>bit_game_template</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\bit_game_template\game.c">
+      <Filter>bit_game_template</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\bit_game_template\console_util.c">
+      <Filter>bit_game_template</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
