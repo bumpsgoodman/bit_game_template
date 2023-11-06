@@ -19,9 +19,6 @@
 #include "safe99_soft_renderer_2d/i_soft_renderer_2d.h"
 #include "safe99_generic/util/timer.h"
 
-#define NUM_MAX_ENEMY1 1000
-#define NUM_MAX_ENEMY2 1000
-
 typedef struct game
 {
     // DLL 핸들
@@ -34,12 +31,19 @@ typedef struct game
     i_file_system_t* p_file_system;
     i_ecs_t* p_ecs;
 
-    // 게임 관련
+    // 프레임 관련
     bool b_running;
     float update_ticks_per_frame;
     size_t fps;
 
     timer_t frame_timer;
+
+    // 여기에 게임 관련 변수 저장
+    // ==============================================================
+
+
+
+    // ==============================================================
 } game_t;
 
 game_t* gp_game;

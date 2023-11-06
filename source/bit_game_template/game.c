@@ -72,6 +72,7 @@ bool init_game(void)
             goto failed_init;
         }
 
+        // ecs 사용 시, 매크로 활성화
     #if 0
         // ecs 월드 초기화
         pf_create_ecs(&gp_game->p_ecs);
@@ -83,20 +84,21 @@ bool init_game(void)
     #endif
     }
 
-    // 게임 초기화
+    // 프레임 초기화
     {
         gp_game->b_running = true;
         gp_game->update_ticks_per_frame = 1.0f / 60.0f;
         gp_game->fps = 0;
         
         timer_init(&gp_game->frame_timer);
-        timer_start(&gp_game->frame_timer);
     }
 
-    // 초기화 코드 작성
+    // 여기에 게임 초기화 코드 삽입
+    // ==============================================================
     {
         
     }
+    // ==============================================================
 
     return true;
 
@@ -157,7 +159,12 @@ void tick_game(void)
 
 static void update(const float delta_time)
 {
+    // 여기에 게임 업데이트 코드 삽입
+    // ==============================================================
 
+
+
+    // ==============================================================
 }
 
 static void draw(void)
@@ -165,7 +172,12 @@ static void draw(void)
     // 화면 렌더링
     gp_game->p_renderer->vtbl->begin_draw(gp_game->p_renderer);
     {
+        // 여기에 게임 렌더링 코드 삽입
+        // ==============================================================
+
         gp_game->p_renderer->vtbl->clear(gp_game->p_renderer, 0xff000000);  // 검은색으로 초기화
+
+        // ==============================================================
     }
     gp_game->p_renderer->vtbl->end_draw(gp_game->p_renderer);
 
