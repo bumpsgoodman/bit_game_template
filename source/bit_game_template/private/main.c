@@ -134,36 +134,36 @@ LRESULT CALLBACK wnd_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
     case WM_LBUTTONDOWN:
     {
-        uint32_t x = GET_X_LPARAM(lParam);
-        uint32_t y = GET_Y_LPARAM(lParam);
+        int x = GET_X_LPARAM(lParam);
+        int y = GET_Y_LPARAM(lParam);
         on_down_left_mouse();
         break;
     }
     case WM_LBUTTONUP:
     {
-        uint32_t x = GET_X_LPARAM(lParam);
-        uint32_t y = GET_Y_LPARAM(lParam);
+        int x = GET_X_LPARAM(lParam);
+        int y = GET_Y_LPARAM(lParam);
         on_up_left_mouse();
         break;
     }
     case WM_RBUTTONDOWN:
     {
-        uint32_t x = GET_X_LPARAM(lParam);
-        uint32_t y = GET_Y_LPARAM(lParam);
+        int x = GET_X_LPARAM(lParam);
+        int y = GET_Y_LPARAM(lParam);
         on_down_right_mouse();
         break;
     }
     case WM_RBUTTONUP:
     {
-        uint32_t x = GET_X_LPARAM(lParam);
-        uint32_t y = GET_Y_LPARAM(lParam);
+        int x = GET_X_LPARAM(lParam);
+        int y = GET_Y_LPARAM(lParam);
         on_up_right_mouse();
         break;
     }
     case WM_MOUSEMOVE:
     {
-        uint32_t x = GET_X_LPARAM(lParam);
-        uint32_t y = GET_Y_LPARAM(lParam);
+        int x = GET_X_LPARAM(lParam);
+        int y = GET_Y_LPARAM(lParam);
         on_move_mouse(x, y);
         break;
     }
@@ -175,12 +175,6 @@ LRESULT CALLBACK wnd_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         on_key_up((uint8_t)wParam);
         break;
 
-    case WM_MOVE:
-        if (gp_game != NULL)
-        {
-            update_window_pos_game();
-        }
-        break;
     case WM_SIZE:
         if (gp_game != NULL)
         {

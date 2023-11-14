@@ -39,7 +39,7 @@
     <ClInclude Include="..\..\source\safe99_math\math_misc.h" />
     <ClInclude Include="..\..\source\safe99_math\matrix.h" />
     <ClInclude Include="..\..\source\safe99_math\vector.h" />
-    <ClInclude Include="..\..\source\safe99_soft_renderer_2d\i_soft_renderer_2d.h" />
+    <ClInclude Include="..\..\source\safe99_soft_renderer\i_soft_renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\bit_game_template\console_util.c" />

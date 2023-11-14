@@ -42,8 +42,8 @@ void on_up_right_mouse(void);
 
 void release_mouse(void);
 
-int32_t get_mouse_x(void);
-int32_t get_mouse_y(void);
+int get_mouse_x(void);
+int get_mouse_y(void);
 
 mouse_state_t get_left_mouse_state(void);
 mouse_state_t get_right_mouse_state(void);

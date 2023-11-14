@@ -15,6 +15,7 @@
 #include "game.h"
 #include "console_util.h"
 #include "key_event.h"
+#include "safe99_math/math.h"
 
 // 전역 변수
 extern HWND g_hwnd;
@@ -34,11 +35,11 @@ bool init_game(void)
     // DLL 로드
     {
     #if defined(_WIN64)
-        gp_game->h_renderer_dll = LoadLibrary(L"safe99_soft_renderer_2d_x64.dll");
+        gp_game->h_renderer_dll = LoadLibrary(L"safe99_soft_renderer_x64.dll");
         gp_game->h_file_system_dll = LoadLibrary(L"safe99_file_system_x64.dll");
         gp_game->h_ecs_dll = LoadLibrary(L"safe99_ecs_x64.dll");
     #else
-        gp_game->h_renderer_dll = LoadLibrary(L"safe99_soft_renderer_2d_x86.dll");
+        gp_game->h_renderer_dll = LoadLibrary(L"safe99_soft_renderer_x86.dll");
         gp_game->h_file_system_dll = LoadLibrary(L"safe99_file_system_x86.dll");
         gp_game->h_ecs_dll = LoadLibrary(L"safe99_ecs_x86.dll");
     #endif // _WIN64
@@ -58,7 +59,7 @@ bool init_game(void)
 
         // 렌더러 초기화
         pf_create_renderer(&gp_game->p_renderer);
-        if (!gp_game->p_renderer->vtbl->initialize(gp_game->p_renderer, g_hwnd))
+        if (!gp_game->p_renderer->vtbl->initialize(gp_game->p_renderer, g_hwnd, false))
         {
             ASSERT(false, "Failed init renderer");
             goto failed_init;
@@ -95,9 +96,9 @@ bool init_game(void)
 
     // 여기에 게임 초기화 코드 삽입
     // ==============================================================
-    {
-        
-    }
+     
+
+
     // ==============================================================
 
     return true;
@@ -169,17 +170,12 @@ static void update(const float delta_time)
 
 static void draw(void)
 {
-    // 화면 렌더링
-    gp_game->p_renderer->vtbl->begin_draw(gp_game->p_renderer);
-    {
-        // 여기에 게임 렌더링 코드 삽입
-        // ==============================================================
+    // 여기에 게임 렌더링 코드 삽입
+    // ==============================================================
 
-        gp_game->p_renderer->vtbl->clear(gp_game->p_renderer, 0xff000000);  // 검은색으로 초기화
+    gp_game->p_renderer->vtbl->clear(gp_game->p_renderer, color_set(0.0f, 0.0f, 0.0f, 1.0f));  // 검은색으로 초기화
 
-        // ==============================================================
-    }
-    gp_game->p_renderer->vtbl->end_draw(gp_game->p_renderer);
+    // ==============================================================
 
     gp_game->p_renderer->vtbl->on_draw(gp_game->p_renderer);
 

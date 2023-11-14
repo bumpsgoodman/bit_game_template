@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="safe99_soft_renderer_2d">
-      <UniqueIdentifier>{eb577ac9-d713-45fd-94be-906ff0a956cd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="safe99_math">
       <UniqueIdentifier>{ad968e83-4ce4-4750-9d76-fbe0e9c00561}</UniqueIdentifier>
     </Filter>
@@ -28,11 +25,11 @@
     <Filter Include="safe99_file_system">
       <UniqueIdentifier>{bf9be4d2-6bc8-420a-90ae-cb6b5d785339}</UniqueIdentifier>
     </Filter>
+    <Filter Include="safe99_soft_renderer">
+      <UniqueIdentifier>{26e184ac-66c9-4bd1-aca2-01bce181daf5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\source\safe99_soft_renderer_2d\i_soft_renderer_2d.h">
-      <Filter>safe99_soft_renderer_2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\source\safe99_math\color.h">
       <Filter>safe99_math</Filter>
     </ClInclude>
@@ -92,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="..\..\source\bit_game_template\console_util.h">
       <Filter>bit_game_template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\safe99_soft_renderer\i_soft_renderer.h">
+      <Filter>safe99_soft_renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

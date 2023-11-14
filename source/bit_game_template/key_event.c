@@ -39,7 +39,7 @@ keyboard_state_t get_key_state(const uint8_t key)
     return s_key_states[key];
 }
 
-void on_move_mouse(const int32_t x, const int32_t y)
+void on_move_mouse(const int x, const int y)
 {
     s_x = x;
     s_y = y;
@@ -71,12 +71,12 @@ void release_mouse(void)
     s_right_state = MOUSE_STATE_UP;
 }
 
-int32_t get_mouse_x(void)
+int get_mouse_x(void)
 {
     return s_x;
 }
 
-int32_t get_mouse_y(void)
+int get_mouse_y(void)
 {
     return s_y;
 }

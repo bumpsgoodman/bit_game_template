@@ -16,7 +16,7 @@
 #include "safe99_common/defines.h"
 #include "safe99_ecs/i_ecs.h"
 #include "safe99_file_system/i_file_system.h"
-#include "safe99_soft_renderer_2d/i_soft_renderer_2d.h"
+#include "safe99_soft_renderer/i_soft_renderer.h"
 #include "safe99_generic/util/timer.h"
 
 typedef struct game
@@ -27,7 +27,7 @@ typedef struct game
     HINSTANCE h_ecs_dll;
 
     // DLL 인스턴스
-    i_soft_renderer_2d_t* p_renderer;
+    i_soft_renderer_t* p_renderer;
     i_file_system_t* p_file_system;
     i_ecs_t* p_ecs;
 
@@ -57,11 +57,6 @@ void tick_game(void);
 FORCEINLINE bool is_running_game(void)
 {
     return gp_game->b_running;
-}
-
-FORCEINLINE void update_window_pos_game(void)
-{
-    gp_game->p_renderer->vtbl->update_window_pos(gp_game->p_renderer);
 }
 
 FORCEINLINE void update_window_size_game(void)
