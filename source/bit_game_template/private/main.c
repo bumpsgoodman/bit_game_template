@@ -16,6 +16,7 @@
 
 #include <Windows.h>
 #include <windowsx.h>
+#include <crtdbg.h>
 
 #include "safe99_common/defines.h"
 #include "key_event.h"
@@ -29,6 +30,10 @@ LRESULT CALLBACK wnd_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 int main(void)
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF
+                   | _CRTDBG_LEAK_CHECK_DF
+                   | _CRTDBG_DELAY_FREE_MEM_DF);
+
     const int window_width = 800;
     const int window_height = 600;
 
@@ -73,6 +78,8 @@ int main(void)
 
     shutdown_game();
     SAFE_FREE(gp_game);
+
+    _CrtDumpMemoryLeaks();
 
     return (int)msg.wParam;
 }
